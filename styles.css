@@ -1,0 +1,274 @@
+/* styles.css (Frontend CSS) */
+
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+:root {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #f6f9ff;
+  color: #444444;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #717ff5;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #102F5C, #1F4677, #6EA2C9, #15294F, #3B628F);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: white;
+}
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hero-section {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  text-align: center;
+  padding: 100px 25px;
+  font-family: "Mulish", sans-serif;
+  background: linear-gradient(to left,
+  #eeeeee,
+  #dddddd,
+  #cccccc,
+  #bbbbbb,
+  #9c9b9b);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
+
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+#main {
+  margin-top: 50px;
+  padding: 20px 30px;
+}
+
+@media (max-width: 1199px) {
+  #main {
+    padding: 20px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.logo {
+  line-height: 50px;
+
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    width: 280px;
+  }
+}
+
+@media (min-width: 992px) {
+  .logo {
+    padding-right: 25%;
+  }
+}
+
+.logo img {
+  
+  max-height: 50px;
+  margin-right: 6px;
+  padding-bottom: 2px;
+}
+
+@media (max-width: 580px) {
+  .logo img {
+    padding-right: 0px;
+  }
+}
+
+.logo span {
+  font-size: 28px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #000000;
+}
+
+.header {
+  z-index: 997;
+  height: 60px;
+  box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+  background-color: #fff;
+}
+
+@media (min-width: 580px) {
+  .header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 1350px) {
+  .header {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+}
+
+.header .toggle-sidebar-btn::before {
+  font-size: 32px;
+  cursor: pointer;
+  color: #15294F;
+  vertical-align: -1.45rem;
+}
+
+/*--------------------------------------------------------------
+# Login Page
+--------------------------------------------------------------*/
+
+
+.login {
+  background: linear-gradient(266.02deg, #012970 1.08%, #3B628F 99.84%);
+}
+
+.login-content .col {
+  margin-bottom: 15%;
+}
+
+.form-container-login {
+    width: 65%;
+    min-width: 250px;
+    max-width: 480px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.form-container-login .btn {
+  background: #012970;
+  color: #fff;
+  padding: 8px 30px;
+}
+
+.text-signup {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #f6f9ff;
+}
+
+.text-signup a {
+  color: #d4d4da;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Media query for viewport width <= 590px */
+@media (max-width: 590px) {
+  .text-signup {
+    /* Adjust font size and line height for smaller screens */
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .form-container-login {
+    width: 85%;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Error 404
+--------------------------------------------------------------*/
+.error-404 {
+  padding: 30px;
+}
+
+.error-404 h1 {
+  font-size: 180px;
+  font-weight: 700;
+  color: #4154f1;
+  margin-bottom: 0;
+  line-height: 150px;
+}
+
+.error-404 h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #012970;
+  margin-bottom: 30px;
+}
+
+.error-404 .btn {
+  background: #51678f;
+  color: #fff;
+  padding: 8px 30px;
+}
+
+.error-404 .btn:hover {
+  background: #3e4f6f;
+}
+
+@media (min-width: 992px) {
+  .error-404 img {
+    max-width: 50%;
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  padding: 20px 0;
+  font-size: 16px;
+  border-top: 1px solid #cddfff;
+  text-align: center;
+  color: #dee1e6;
+  max-height: 20%;
+}
+
+.footer .credits {
+  padding-top: 5px;
+  color: #dee1e6;
+}
+
+.footer .social > * {
+  padding: 0 10px; /* Adjust the value as needed */
+}
