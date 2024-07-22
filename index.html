@@ -111,31 +111,6 @@
     </footer>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script>
-    document.getElementById('emailForm').addEventListener('submit', function (event) {
-      event.preventDefault();
-      const email = document.getElementById('email').value;
-      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-
-      if (emailPattern.test(email)) {
-        alert('Email is valid. Submitting...');
-        // Replace the URL below with your actual API endpoint
-        fetch('https://example.com/api/subscribe', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ email: email })
-        })
-          .then(response => response.json())
-          .then(data => alert('Successfully signed up!'))
-          .catch(error => alert('Error:', error));
-      } else {
-        alert('Please enter a valid email address.');
-      }
-    });
-  </script>
 </body>
 
 </html>
